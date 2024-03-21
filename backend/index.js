@@ -31,7 +31,7 @@ mongoose.connect(MONGOURI)
     console.log(error)
 })
 
-app.listen(PORT,()=>{
+app.listen(PORT ,()=>{
     console.log(`server started at ${PORT}`)
 })
 
