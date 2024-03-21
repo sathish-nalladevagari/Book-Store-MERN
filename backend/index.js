@@ -1,5 +1,5 @@
 import express from "express";
-import { MONGOURI, PORT } from "./config.js";
+import { MONGOURI } from "./config.js";
 import mongoose from "mongoose";
 import cors from "cors"
 import bookRoute from "./routes/bookRoute.js"
@@ -31,7 +31,7 @@ mongoose.connect(MONGOURI)
     console.log(error)
 })
 
-app.listen(process.env.PROD || PORT ,()=>{
+app.listen(process.env.PROD  ,()=>{
     console.log(`server started `)
 })
 
