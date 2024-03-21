@@ -1,11 +1,14 @@
 import express from "express";
 import { MONGOURI, PORT } from "./config.js";
 import mongoose from "mongoose";
-
+import cors from "cors"
 import bookRoute from "./routes/bookRoute.js"
+
 
 const app = express();
 app.use(express.json())
+app.use(cors())
+
 app.use("/books",bookRoute)
 
 app.get("/",(req,res)=>{
