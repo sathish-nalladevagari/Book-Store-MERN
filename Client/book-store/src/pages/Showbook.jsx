@@ -9,7 +9,7 @@ function Showbook() {
     const { id } = useParams();
     useEffect(() => {
         setLoading(true)
-        axios.get(`http://localhost:5555/books/${id}`)
+        axios.get(`https://book-store-mern-tawny.vercel.app/books/${id}`)
             .then((res) => {
                 setBook(res.data)
                 setLoading(false)

@@ -13,7 +13,7 @@ function EditBook() {
     const {id} = useParams();
     useEffect(()=>{
         setLoading(true)
-        axios.get(`http://localhost:5555/books/${id}`)
+        axios.get(`https://book-store-mern-tawny.vercel.app/books/${id}`)
         .then((response)=>{
             setTitle(response.data.title)
             setAuthor(response.data.author)
@@ -34,7 +34,7 @@ function EditBook() {
             publishYear : publishYear
         }
         setLoading(true)
-        axios.put(`http://localhost:5555/books/${id}`,data)
+        axios.put(`https://book-store-mern-tawny.vercel.app/books/${id}`,data)
         .then(()=>{
             setLoading(false)
             navigate("/")

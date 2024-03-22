@@ -17,7 +17,7 @@ function CreateBook() {
             publishYear : publishYear
         }
         setLoading(true)
-        axios.post("http://localhost:5555/books",data)
+        axios.post("https://book-store-mern-tawny.vercel.app/books",data)
         .then(()=>{
             setLoading(false)
             navigate("/")
